@@ -14,7 +14,7 @@ const App = () => {
 	const handleChangeQuote = () => {
 		const prevQuote = selectedQuote;
 		let newQuote = prevQuote;
-		while (newQuote == prevQuote) {
+		while (newQuote === prevQuote) {
 			newQuote = quotes[Math.floor(Math.random() * quotes.length)];
 		}
 		setSelectedQuote(newQuote);

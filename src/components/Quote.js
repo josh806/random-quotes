@@ -28,6 +28,7 @@ const Quote = (props) => {
 						className="quoteBox__btn"
 						href="https://twitter.com/intent/tweet"
 						target="_blank"
+						rel="noreferrer"
 						id="tweet-quote"
 						style={{ backgroundColor: props.customColour }}
 					>
