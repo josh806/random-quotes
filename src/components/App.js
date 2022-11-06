@@ -4,7 +4,7 @@ import Quote from './Quote';
 
 const App = () => {
 	const [selectedQuote, setSelectedQuote] = useState(null);
-	const [quotes, getQuotes] = useQuotes({ tags: 'famous-quotes' });
+	const [quotes] = useQuotes({ tags: 'famous-quotes' });
 	let customColour = null;
 
 	useEffect(() => {
