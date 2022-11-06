@@ -17,7 +17,7 @@ const Quote = (props) => {
 			);
 		}
 
-		return <div>Loading quote</div>;
+		return <div className="quoteBox__content">Loading quote</div>;
 	};
 
 	const renderControls = () => {
