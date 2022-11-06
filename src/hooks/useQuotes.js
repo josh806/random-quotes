@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import quotable from '../apis/quotes';
 
-const useQuotes = (quotableParams) => {
+const useQuotes = (quotableTags) => {
 	const [quotes, setQuotes] = useState([]);
 
 	useEffect(() => {
-		getQuotes(quotableParams);
-	});
+		getQuotes(quotableTags);
+	}, [quotableTags]);
 
-	const getQuotes = async (params) => {
-		const quotesData = await quotable.get('/quotes', { params });
+	const getQuotes = async (tags) => {
+		const quotesData = await quotable.get('/quotes', {
+			tags: tags,
+		});
 
 		setQuotes(quotesData.data.results);
 	};
